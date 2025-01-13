@@ -5,12 +5,12 @@ import MovieCard from "../components/MovieCard";
 function Favorites() {
   const { favorites } = useMovieContext();
 
-  if (favorites) {
+  if (favorites.length) {
     return (
       <div className="favorites">
         <h2>Your Favorites</h2>
         <div className="movies-grid">
-          {movies.map((movie) => (
+          {favorites.map((movie) => (
             <MovieCard movie={movie} key={movie.id} />
           ))}
         </div>
